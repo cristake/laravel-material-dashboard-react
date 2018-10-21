@@ -1,5 +1,8 @@
-import Dashboard from '../components/Admin/Dashboard/Dashboard';
+import Landing from '../components/frontend/Landing/Landing';
 
-const indexRoutes = [{ path: "/admin", component: Dashboard }];
+const indexRoutes = [
+	{ path: "/", component: Landing },
+	{ redirect: true, path: "/register", to: "/", navbarName: "Redirect" }
+];
 
 export default indexRoutes;

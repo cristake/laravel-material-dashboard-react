@@ -1,5 +1,5 @@
 // @material-ui/icons
-import Dashboard from "@material-ui/icons/Dashboard";
+import DashboardIcons from "@material-ui/icons/Dashboard";
 // import Person from "@material-ui/icons/Person";
 // import ContentPaste from "@material-ui/icons/ContentPaste";
 // import LibraryBooks from "@material-ui/icons/LibraryBooks";
@@ -9,17 +9,25 @@ import Dashboard from "@material-ui/icons/Dashboard";
 // import Unarchive from "@material-ui/icons/Unarchive";
 
 // core components
-import DashboardPage from '../components/admin/Dashboard/Dashboard';
+import Dashboard from '../containers/Dashboard/Dashboard';
 
-const dashboardRoutes = [
+const adminRoutes = [
 	{
 	  path: "/admin/home",
 	  sidebarName: "Dashboard",
 	  navbarName: "Dashboard",
-	  icon: Dashboard,
-	  component: DashboardPage
+	  icon: DashboardIcons,
+	  component: Dashboard
 	},
+	{
+	  path: "/admin/test",
+	  sidebarName: "Test",
+	  navbarName: "Test",
+	  icon: DashboardIcons,
+	  component: Dashboard
+	},
+
 	{ redirect: true, path: "/admin", to: "/admin/home", navbarName: "Redirect" }
 ];
 
-export default dashboardRoutes;
+export default adminRoutes;

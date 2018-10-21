@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import classNames from "classnames";
 
 // @material-ui/core components
@@ -18,12 +18,12 @@ import Dashboard from "@material-ui/icons/Dashboard";
 import Search from "@material-ui/icons/Search";
 
 // core components
-// import CustomInput from "components/CustomInput/CustomInput.jsx";
-// import Button from "components/CustomButtons/Button.jsx";
+import CustomInput from '../../../CustomInput/CustomInput';
+import Button from '../../../Button/Button';
 
 import headerLinksStyle from './headerLinksStyle.jsx';
 
-class HeaderLinks extends React.Component {
+class HeaderLinks extends Component {
   state = {
     open: false
   };

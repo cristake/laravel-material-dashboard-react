@@ -11,36 +11,37 @@ import "perfect-scrollbar/css/perfect-scrollbar.css";
 import withStyles from "@material-ui/core/styles/withStyles";
 
 // core components
-// import Header from "components/Header/Header.jsx";
-// import Footer from "components/Footer/Footer.jsx";
-import Sidebar from '../Navigation/Sidebar/Sidebar';
+import Layout from '../../hoc/Layout/Layout'
+import Header from '../../components/admin/Navigation/Header/Header';
+import Footer from '../../components/admin/Navigation/Footer/Footer';
+import Sidebar from '../../components/admin/Navigation/Sidebar/Sidebar';
 
-import dashboardRoutes from '../../../routes/dashboard';
+import adminRoutes from '../../routes/admin';
 
 import dashboardStyle from './DashboardStyles.jsx';
 
-import logo from '../../../assets/img/reactlogo.png';
+import logo from '../../assets/img/reactlogo.png';
 
 const switchRoutes = (
 	<Switch>
-    	{dashboardRoutes.map((prop, key) => {
+		{adminRoutes.map((prop, key) => {
 			if (prop.redirect)
-        		return <Redirect from={prop.path} to={prop.to} key={key} />;
-    		return <Route path={prop.path} component={prop.component} key={key} />;
-    	})}
+				return <Redirect from={prop.path} to={prop.to} key={key} />;
+			return <Route path={prop.path} component={prop.component} key={key} />;
+		})}
 	</Switch>
 );
 
 class Dashboard extends Component {
 	constructor(props) {
-    	super(props);
-    	this.state = {
+		super(props);
+		this.state = {
 			mobileOpen: false
 		};
 		this.resizeFunction = this.resizeFunction.bind(this);
 	}
 
-	handleDrawerToggle () {
+	handleDrawerToggle = () => {
 		this.setState({ mobileOpen: !this.state.mobileOpen });
 	};
 
@@ -76,41 +77,38 @@ class Dashboard extends Component {
 
 	render() {
 		const { classes, ...rest } = this.props;
-	
+
 		return (
-			<div className={classes.wrapper}>
-			<Sidebar
-				routes={dashboardRoutes}
-				logoText={"Creative Tim"}
-				logo={logo}
-				handleDrawerToggle={this.handleDrawerToggle}
-				open={this.state.mobileOpen}
-				color="blue"
-				{...rest}
-				/>
-			<div className={classes.mainPanel} ref="mainPanel">
-				<Header
-					routes={dashboardRoutes}
+			<Layout className={classes.wrapper}>
+				<Sidebar
+					routes={adminRoutes}
+					logoText={"Laravel Admin"}
+					logo={logo}
 					handleDrawerToggle={this.handleDrawerToggle}
-					{...rest} />
-				
-				{/* On the /maps route we want the map to be on full screen - this is not possible if the content and conatiner classes are present because they have some paddings which would make the map smaller */}
-				{this.getRoute() ? (
+					open={this.state.mobileOpen}
+					color="blue"
+					{...rest}
+				/>
+
+				<div className={classes.mainPanel} ref="mainPanel">
+					<Header
+						routes={adminRoutes}
+						handleDrawerToggle={this.handleDrawerToggle}
+						{...rest} />
+
 					<div className={classes.content}>
-					<div className={classes.container}>{switchRoutes}</div>
+						<div className={classes.container}>{switchRoutes}</div>
 					</div>
-				) : (
-					<div className={classes.map}>{switchRoutes}</div>
-				)}
-				{this.getRoute() ? <Footer /> : null}
-			</div>
-		</div>
+
+					<Footer />
+				</div>
+			</Layout>
 		);
 	}
 }
 
 Dashboard.propTypes = {
-  classes: PropTypes.object.isRequired
+	classes: PropTypes.object.isRequired
 };
 
 export default withStyles(dashboardStyle)(Dashboard);

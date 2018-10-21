@@ -2,7 +2,7 @@ import {
 	drawerWidth,
 	transition,
 	container
-  } from '../AdminStyles.jsx';
+  } from '../../assets/styles/AdminStyles.jsx';
   
   const appStyle = theme => ({
 	wrapper: {

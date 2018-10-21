@@ -7,7 +7,7 @@ import {
 	successColor,
 	warningColor,
 	dangerColor
-} from '../../AdminStyles.jsx';
+} from '../../../../assets/styles/AdminStyles.jsx';
   
   const headerStyle = theme => ({
 	appBar: {

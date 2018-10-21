@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom';
 
-import classes from './Landing.css'
+// import classes from './Landing.css'
 
 class Landing extends Component {
 	render () {
