@@ -1,24 +1,17 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom';
 
-import classes from './Landing.css'
+// import classes from './Landing.css'
 
 class Landing extends Component {
 	render () {
 		return (
 			<div className="flex-center position-ref full-height">
-				{/* @if (Route::has('login'))
-					<div className="top-right links">
-						@auth
-							<a href="{{ url('/home') }}">Home</a>
-						@else
-							<a href="{{ route('login') }}">Login</a>
-
-							@if (Route::has('register'))
-								<a href="{{ route('register') }}">Register</a>
-							@endif
-						@endauth
-					</div>
-				@endif */}
+				<div className="top-right links">
+						<NavLink to="/admin">Home</NavLink>
+						<NavLink to="/login">Login</NavLink>
+						<NavLink to="/register">Register</NavLink>
+				</div>
 
 				<div className="content">
 					<div className="title m-b-md">

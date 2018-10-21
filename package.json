@@ -13,7 +13,7 @@
         "axios": "^0.18",
         "babel-plugin-transform-class-properties": "^6.24.1",
         "babel-preset-env": "^1.7.0",
-        "babel-preset-react": "^6.23.0",
+        "babel-preset-react": "^6.24.1",
         "babel-preset-stage-1": "^6.24.1",
         "bootstrap": "^4.0.0",
         "browser-sync": "^2.26.3",
@@ -29,6 +29,8 @@
     "dependencies": {
         "@material-ui/core": "3.1.0",
         "@material-ui/icons": "3.0.1",
+        "classnames": "^2.2.6",
+        "perfect-scrollbar": "^1.4.0",
         "react-router-dom": "^4.3.1"
     }
 }
