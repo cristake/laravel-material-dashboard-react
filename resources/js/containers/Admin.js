@@ -13,7 +13,6 @@ class Admin extends Component {
 			<Layout>
 				<Switch>
 					<Route path={`${match.url}/home`} component={Dashboard} />
-					{/* <Route path="`${match.url}/home`" component={Dashboard} /> */}
 					{/* <Route component={NotFound} /> */}
 					<Redirect to={`${match.url}/home`} />
 				</Switch>
