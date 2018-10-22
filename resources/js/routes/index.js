@@ -1,8 +1,10 @@
-import Landing from '../components/frontend/Landing/Landing';
+import Admin from '../containers/Admin/Admin'
+import Frontend from '../containers/Frontend/Frontend'
 
 const indexRoutes = [
-	{ path: "/", component: Landing },
-	{ redirect: true, path: "/register", to: "/", navbarName: "Redirect" }
+	{ path: "/admin", component: Admin },
+	{ path: "/", component: Frontend },
+	// { redirect: true, path: "/register", to: "/", navbarName: "Redirect" }
 ];
 
 export default indexRoutes;

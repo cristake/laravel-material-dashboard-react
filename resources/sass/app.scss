@@ -8,6 +8,9 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+// Main css
+@import 'main';
+
 .navbar-laravel {
   background-color: #eee;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);

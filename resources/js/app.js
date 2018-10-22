@@ -3,16 +3,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Frontend from './containers/Frontend/Frontend';
-import Dashboard from './containers/Dashboard/Dashboard';
+import "./assets/css/admin.css";
+
+import indexRoutes from './routes/index'
 
 const app = (
 	<BrowserRouter>
 		<Switch>
-			<Route path="/admin" component={Dashboard} />
-			<Route path="/" exact component={Frontend} />
+			{indexRoutes.map((prop, key) => {
+				return <Route path={prop.path} component={prop.component} key={key} />;
+			})}
 		</Switch>
 	</BrowserRouter>
 );
 
-ReactDOM.render( app, document.getElementById( 'app' ) );
+ReactDOM.render(app, document.getElementById('app'));
