@@ -2,16 +2,16 @@ import React from "react";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 // core components
-import Quote from "../../../components/admin/Typography/Quote.jsx";
-import Muted from "../../../components/admin/Typography/Muted.jsx";
-import Primary from "../../../components/admin/Typography/Primary.jsx";
-import Info from "../../../components/admin/Typography/Info.jsx";
-import Success from "../../../components/admin/Typography/Success.jsx";
-import Warning from "../../../components/admin/Typography/Warning.jsx";
-import Danger from "../../../components/admin/Typography/Danger.jsx";
-import Card from "../../../components/admin/Card/Card.jsx";
-import CardHeader from "../../../components/admin/Card/CardHeader.jsx";
-import CardBody from "../../../components/admin/Card/CardBody.jsx";
+import Quote from "../../../components/admin/Typography/Quote";
+import Muted from "../../../components/admin/Typography/Muted";
+import Primary from "../../../components/admin/Typography/Primary";
+import Info from "../../../components/admin/Typography/Info";
+import Success from "../../../components/admin/Typography/Success";
+import Warning from "../../../components/admin/Typography/Warning";
+import Danger from "../../../components/admin/Typography/Danger";
+import Card from "../../../components/admin/Card/Card";
+import CardHeader from "../../../components/admin/Card/CardHeader";
+import CardBody from "../../../components/admin/Card/CardBody";
 
 const style = {
   typo: {

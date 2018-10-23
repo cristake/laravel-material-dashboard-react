@@ -5,14 +5,14 @@ import withStyles from "@material-ui/core/styles/withStyles";
 // @material-ui/icons
 import AddAlert from "@material-ui/icons/AddAlert";
 // core components
-import GridItem from "../../../components/admin/Grid/GridItem.jsx";
-import GridContainer from "../../../components/admin/Grid/GridContainer.jsx";
-import Button from "../../../components/admin/CustomButtons/Button.jsx";
-import SnackbarContent from "../../../components/admin/Snackbar/SnackbarContent.jsx";
-import Snackbar from "../../../components/admin/Snackbar/Snackbar.jsx";
-import Card from "../../../components/admin/Card/Card.jsx";
-import CardHeader from "../../../components/admin/Card/CardHeader.jsx";
-import CardBody from "../../../components/admin/Card/CardBody.jsx";
+import GridItem from "../../../components/admin/Grid/GridItem";
+import GridContainer from "../../../components/admin/Grid/GridContainer";
+import Button from "../../../components/admin/CustomButtons/Button";
+import SnackbarContent from "../../../components/admin/Snackbar/SnackbarContent";
+import Snackbar from "../../../components/admin/Snackbar/Snackbar";
+import Card from "../../../components/admin/Card/Card";
+import CardHeader from "../../../components/admin/Card/CardHeader";
+import CardBody from "../../../components/admin/Card/CardBody";
 
 const styles = {
   cardCategoryWhite: {

@@ -14,9 +14,9 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Icon from "@material-ui/core/Icon";
 
 // core components
-import HeaderLinks from "../Header/HeaderLinks.jsx";
+import HeaderLinks from "../Header/HeaderLinks";
 
-import sidebarStyle from "./sidebarStyle.jsx";
+import sidebarStyle from "../../../assets/jss/material-dashboard-react/components/sidebarStyle";
 
 const Sidebar = ({ ...props }) => {
   // verifies if routeName is the one active (in browser input)
