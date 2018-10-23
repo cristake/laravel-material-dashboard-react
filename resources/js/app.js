@@ -7,7 +7,10 @@ import "./assets/css/material-dashboard-react.css?v=1.5.0";
 
 import indexRoutes from './routes/index'
 
+// var hist = createBrowserHistory();
+
 const app = (
+	// <Router history={hist}>
 	<BrowserRouter>
 		<Switch>
 			{indexRoutes.map((prop, key) => {
@@ -15,6 +18,7 @@ const app = (
 			})}
 		</Switch>
 	</BrowserRouter>
+	// </Router>
 );
 
 ReactDOM.render(app, document.getElementById('app'));

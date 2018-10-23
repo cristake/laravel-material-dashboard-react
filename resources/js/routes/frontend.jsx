@@ -1,32 +1,11 @@
-// @material-ui/icons
+import LandingPage from "../views/frontend/LandingPage/LandingPage";
+import ProfilePage from "../views/frontend/ProfilePage/ProfilePage";
+import LoginPage from "../views/frontend/LoginPage/LoginPage";
 
-// core components
-import Landing from '../views/frontend/Landing/Landing'
-import Login from '../views/frontend/Login/Login'
-import Register from '../views/frontend/Register/Register'
-
-const frontendRoutes = [
-	{
-		path: "/home",
-		// sidebarName: "Dashboard",
-		navbarName: "Home",
-		// icon: DashboardIcons,
-		component: Landing
-	},
-
-	{
-		path: "/login",
-		navbarName: "Login",
-		component: Login
-	},
-
-	{
-		path: "/register",
-		navbarName: "Register",
-		component: Register
-	},
-
-	{ redirect: true, path: "/", to: "/home" }
+var indexRoutes = [
+	{ path: "/profile", name: "ProfilePage", component: ProfilePage },
+	{ path: "/login", name: "LoginPage", component: LoginPage },
+	{ path: "/", name: "LandingPage", component: LandingPage },
 ];
 
-export default frontendRoutes;
+export default indexRoutes;

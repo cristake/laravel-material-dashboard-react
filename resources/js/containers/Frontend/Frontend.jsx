@@ -20,10 +20,7 @@ class Frontend extends Component {
 	render() {
 		return (
 			<Layout>
-				<div className="flex-center position-ref full-height">
-					<Header />
-					{switchRoutes}
-				</div>
+				{switchRoutes}
 			</Layout>
 		)
 	}
