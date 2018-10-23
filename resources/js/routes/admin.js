@@ -39,6 +39,7 @@ const adminRoutes = [
     sidebarName: "Table List",
     navbarName: "Table List",
     icon: "content_paste",
+    // icon: ContentPaste,
     component: TableList
   },
   {
