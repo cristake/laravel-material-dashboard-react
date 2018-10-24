@@ -1,5 +1,6 @@
 /*eslint-disable*/
 import React from "react";
+
 // react components for routing our app without refresh
 import { Link } from "react-router-dom";
 
@@ -47,7 +48,8 @@ function HeaderLinks({ ...props }) {
       </ListItem> */}
       <ListItem className={classes.listItem}>
         <Button
-          href="/login"
+		  component={Link}
+		  to="/login"
           color="transparent"
           className={classes.navLink}
         >
@@ -56,7 +58,8 @@ function HeaderLinks({ ...props }) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href="/profile"
+          component={Link}
+		  to="/profile"
           color="transparent"
           className={classes.navLink}
         >
@@ -71,7 +74,8 @@ function HeaderLinks({ ...props }) {
           classes={{ tooltip: classes.tooltip }}
         >
           <Button
-            href="https://twitter.com/CreativeTim"
+            component={Link}
+			to="https://twitter.com/CreativeTim"
             target="_blank"
             color="transparent"
             className={classes.navLink}
@@ -89,7 +93,8 @@ function HeaderLinks({ ...props }) {
         >
           <Button
             color="transparent"
-            href="https://www.facebook.com/CreativeTim"
+            component={Link}
+		  	to="https://www.facebook.com/CreativeTim"
             target="_blank"
             className={classes.navLink}
           >
@@ -106,7 +111,8 @@ function HeaderLinks({ ...props }) {
         >
           <Button
             color="transparent"
-            href="https://www.instagram.com/CreativeTimOfficial"
+            component={Link}
+		  	to="https://www.instagram.com/CreativeTimOfficial"
             target="_blank"
             className={classes.navLink}
           >
